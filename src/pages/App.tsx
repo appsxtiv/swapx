@@ -51,6 +51,12 @@ import Saave from './Saave'
 
 import { KashiProvider } from 'kashi/context'
 
+import sushiData from '@sushiswap/sushi-data'
+
+sushiData.bentobox
+  .clones({masterAddress: '0x2cba6ab6574646badc84f0544d05059e57a5dc42', chainId: 1})
+  .then(clones => console.log(clones))
+
 const AppWrapper = styled.div`
     display: flex;
     flex-flow: column;
